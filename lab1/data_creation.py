@@ -86,7 +86,7 @@ df_lin = pd.DataFrame(data = lin_y,
 
 sin_y, sin_y_true, x = dataset(a=3,
                 b=0.333,
-                f=[np.sin, np.cos]
+                f=[np.sin, np.cos],
                 N=1000,
                 x_max=10,
                 noise_power=0.1,
