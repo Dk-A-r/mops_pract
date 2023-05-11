@@ -76,45 +76,45 @@ lin_y, lin_y_true, x = dataset(a=3,
                     random_x=True,
                     seed=42
                     )
-  lin_indexes = list(range(250))
-  lin_col_names = ['x', 'x**2']
-  df_lin = pd.DataFrame(data = lin_y, 
-                  index = lin_indexes, 
-                  columns = lin_col_names)
-  
-  #Генерация гармонической зависимости
-  
-  sin_y, sin_y_true, x = dataset(a=3,
-                    b=0.333,
-                    f=[np.sin, np.cos]
-                    N=1000,
-                    x_max=10,
-                    noise_power=0.1,
-                    random_x=True,
-                    seed=42
-                    )
-  sin_indexes = list(range(1000))
-  sin_col_names = ['sin', 'cos']
-  df_sin = pd.DataFrame(data = sin_y_true, 
-                  index = sin_indexes, 
-                  columns = sin_col_names)
-  
-  
-  #Генерация полинома второй степени
-  
-  pol_y, pol_y_true, x = dataset(a=[0.32, 0.75],
-                    b=7,
-                    f=[lambda x: x, lambda k: k**2],
-                    N=250,
-                    x_max=10,
-                    noise_power=3,
-                    random_x=True,
-                    seed=42
-                    )
-  pol_indexes = list(range(250))
-  pol_col_names = ['x', 'x**2']
-  df_pol = pd.DataFrame(data = pol_y_true, 
-                  index = pol_indexes, 
-                  columns = pol_col_names)
-  
-  
+lin_indexes = list(range(250))
+lin_col_names = ['x', 'x**2']
+df_lin = pd.DataFrame(data = lin_y, 
+              index = lin_indexes, 
+              columns = lin_col_names)
+
+#Генерация гармонической зависимости
+
+sin_y, sin_y_true, x = dataset(a=3,
+                b=0.333,
+                f=[np.sin, np.cos]
+                N=1000,
+                x_max=10,
+                noise_power=0.1,
+                random_x=True,
+                seed=42
+                )
+sin_indexes = list(range(1000))
+sin_col_names = ['sin', 'cos']
+df_sin = pd.DataFrame(data = sin_y_true, 
+              index = sin_indexes, 
+              columns = sin_col_names)
+
+
+#Генерация полинома второй степени
+
+pol_y, pol_y_true, x = dataset(a=[0.32, 0.75],
+                b=7,
+                f=[lambda x: x, lambda k: k**2],
+                N=250,
+                x_max=10,
+                noise_power=3,
+                random_x=True,
+                seed=42
+                )
+pol_indexes = list(range(250))
+pol_col_names = ['x', 'x**2']
+df_pol = pd.DataFrame(data = pol_y_true, 
+              index = pol_indexes, 
+              columns = pol_col_names)
+
+
