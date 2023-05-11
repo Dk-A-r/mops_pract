@@ -1,4 +1,8 @@
 #!/bin/bash
+
+sudo mkdir 'train'
+sudo mkdir 'test'
+
 TRIALNAME0="data_creation.py"
 TRIALNAME1="data_preprocessing.py"
 TRIALNAME2="model_preparation.py"
