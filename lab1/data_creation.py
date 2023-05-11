@@ -81,6 +81,9 @@ lin_col_names = ['x', 'x**2']
 df_lin = pd.DataFrame(data = lin_y, 
               index = lin_indexes, 
               columns = lin_col_names)
+df_lin_true = pd.DataFrame(data = lin_y, 
+              index = lin_indexes, 
+              columns = lin_col_names)
 
 #Генерация гармонической зависимости
 
@@ -95,7 +98,10 @@ sin_y, sin_y_true, x = dataset(a=3,
                 )
 sin_indexes = list(range(1000))
 sin_col_names = ['sin', 'cos']
-df_sin = pd.DataFrame(data = sin_y_true, 
+df_sin = pd.DataFrame(data = sin_y, 
+              index = sin_indexes, 
+              columns = sin_col_names)
+df_sin_true = pd.DataFrame(data = sin_y_true, 
               index = sin_indexes, 
               columns = sin_col_names)
 
@@ -113,8 +119,21 @@ pol_y, pol_y_true, x = dataset(a=[0.32, 0.75],
                 )
 pol_indexes = list(range(250))
 pol_col_names = ['x', 'x**2']
-df_pol = pd.DataFrame(data = pol_y_true, 
+df_pol = pd.DataFrame(data = pol_y, 
+              index = pol_indexes, 
+              columns = pol_col_names)
+df_pol_true = pd.DataFrame(data = pol_y_true, 
               index = pol_indexes, 
               columns = pol_col_names)
 
+#Сохраняем в файлы
 
+#Сначала тренировочные
+df_lin.to_csv('train/lin.csv', index=False)
+df_sin.to_csv('train/sin.csv', index=False)
+df_pol.to_csv('train/pol.csv', index=False)
+
+#Потом тестовые
+df_lin_true.to_csv('test/lin_true.csv', index=False)
+df_sin_true.to_csv('test/lin_true.csv', index=False)
+df_pol_true.to_csv('test/lin_true.csv', index=False)
