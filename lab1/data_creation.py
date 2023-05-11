@@ -135,5 +135,5 @@ df_pol.to_csv('train/pol.csv', index=False)
 
 #Потом тестовые
 df_lin_true.to_csv('test/lin_true.csv', index=False)
-df_sin_true.to_csv('test/lin_true.csv', index=False)
-df_pol_true.to_csv('test/lin_true.csv', index=False)
+df_sin_true.to_csv('test/sin_true.csv', index=False)
+df_pol_true.to_csv('test/pol_true.csv', index=False)
