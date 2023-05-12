@@ -29,30 +29,36 @@ X_sin_train, X_sin_test, y_sin_train, y_sin_test = train_test_split(
               x_sin, y_sin, test_size=0.33, random_state=42)
 
 #Тренировочные данные
-df_tr_lin = pd.DataFrame('Скорость': X_lin_train,
-                        'Путь': y_lin_train)
-df_tr_pol = pd.DataFrame('Время': X_pol_train,
-                        'Высота': y_pol_train)
-df_tr_sin = pd.DataFrame('Угол': X_sin_train,
-                        'Скорость': y_sin_train)
+df_tr_lin = pd.DataFrame({
+                        'Скорость': X_lin_train,\
+                        'Путь': y_lin_train
+                         })
+df_tr_pol = pd.DataFrame({
+                        'Время': X_pol_train,
+                        'Высота': y_pol_train
+                         })
+df_tr_sin = pd.DataFrame({
+                        'Угол': X_sin_train,
+                        'Скорость': y_sin_train
+                         })
 
 #Тестовые данные
-df_ts_lin = pd.DataFrame('Скорость': X_lin_test,
-                        'Путь': y_lin_test)
-df_ts_pol = pd.DataFrame('Время': X_pol_test,
-                        'Высота': y_pol_test)
-df_ts_sin = pd.DataFrame('Угол': X_sin_test,
-                        'Скорость': y_sin_test)
+df_ts_lin = pd.DataFrame({'Скорость': X_lin_test,
+                        'Путь': y_lin_test})
+df_ts_pol = pd.DataFrame({'Время': X_pol_test,
+                        'Высота': y_pol_test})
+df_ts_sin = pd.DataFrame({'Угол': X_sin_test,
+                        'Скорость': y_sin_test})
 
 #Проверить, есть ли директория для тестовых и тренировочных, если нет, то создать
 
 def creatdir(*paths):
     for i in paths:
         isExists = os.path.exists(i)
-        if not is Exists:
+        if not isExists:
             os.makedirs(i)
             
-createdir('train', 'test')
+creatdir('train', 'test')
 
 
 #Сохраняем в файлы
@@ -63,6 +69,6 @@ df_tr_sin.to_csv('train/sin.csv', index=False)
 df_tr_pol.to_csv('train/pol.csv', index=False)
 
 #Потом тестовые
-df_ts_lin_true.to_csv('test/lin_true.csv', index=False)
-df_ts_sin_true.to_csv('test/sin_true.csv', index=False)
-df_ts_pol_true.to_csv('test/pol_true.csv', index=False)
+df_ts_lin.to_csv('test/lin_true.csv', index=False)
+df_ts_sin.to_csv('test/sin_true.csv', index=False)
+df_ts_pol.to_csv('test/pol_true.csv', index=False)
