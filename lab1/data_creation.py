@@ -4,7 +4,7 @@ import os
 from sklearn.model_selection import train_test_split
 
 x_lin = np.random.randn(250)*10
-x_pol = np.random.randn(250)
+x_pol = np.random.randn(250)*10
 x_sin = np.random.randn(1000)*np.pi
 
 y_lin = x_lin*8 + 7 #значение пути при постоянной скорости x_lin
