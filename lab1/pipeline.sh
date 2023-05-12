@@ -6,11 +6,11 @@ TRIALNAME2="./model_preparation.py"
 TRIALNAME3="./model_testing.py"
 
 
-sudo chmod a+rwx $TRIALNAME0
-sudo chmod a+rwx $TRIALNAME1
-sudo chmod a+rwx $TRIALNAME2
-sudo chmod a+rwx $TRIALNAME3
-sudo chmod a+rwx $TRIALNAME4
+sudo chmod +x $TRIALNAME0
+sudo chmod +x $TRIALNAME1
+sudo chmod +x $TRIALNAME2
+sudo chmod +x $TRIALNAME3
+sudo chmod +x $TRIALNAME4
 
 python ./data_creation.py
 python ./data_preprocessing.py
