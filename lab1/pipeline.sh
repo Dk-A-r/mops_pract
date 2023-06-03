@@ -1,9 +1,9 @@
 #!/bin/bash
 
-TRIALNAME0="./mops_pract-main/lab1/data_creation.py"
-TRIALNAME1="./mops_pract-main/lab1/data_preprocessing.py"
-TRIALNAME2="./mops_pract-main/lab1/model_preparation.py"
-TRIALNAME3="./mops_pract-main/lab1/model_testing.py"
+TRIALNAME0='sudo find . -path \*mops_pract-main/lab1/data_creation.py'
+TRIALNAME1='sudo find . -path \*mops_pract-main/lab1/data_preprocessing.py'
+TRIALNAME2='sudo find . -path \*mops_pract-main/lab1/model_preparation.py'
+TRIALNAME3='sudo find . -path \*mops_pract-main/lab1/model_testing.py'
 
 
 sudo chmod +x $TRIALNAME0
