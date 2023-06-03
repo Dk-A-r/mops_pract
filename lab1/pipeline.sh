@@ -10,7 +10,6 @@ sudo chmod +x $TRIALNAME0
 sudo chmod +x $TRIALNAME1
 sudo chmod +x $TRIALNAME2
 sudo chmod +x $TRIALNAME3
-sudo chmod +x $TRIALNAME4
 
 python data_creation.py
 python data_preprocessing.py
