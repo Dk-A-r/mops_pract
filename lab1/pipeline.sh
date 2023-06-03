@@ -11,7 +11,7 @@ sudo chmod +x $TRIALNAME1
 sudo chmod +x $TRIALNAME2
 sudo chmod +x $TRIALNAME3
 
-python $TRIALNAME0
-python $TRIALNAME1
-python $TRIALNAME2
-python $TRIALNAME3
+sudo python $TRIALNAME0
+sudo python $TRIALNAME1
+sudo python $TRIALNAME2
+sudo python $TRIALNAME3
