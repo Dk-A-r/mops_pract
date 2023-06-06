@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo apt install python3-pip
-pip install pandas
 pip install numpy
+pip install pandas
 pip install -U scikit-learn
 
 TRIALNAME0=`sudo find / -path \*mops_pract-main/lab1/data_creation.py`
