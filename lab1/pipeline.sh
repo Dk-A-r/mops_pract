@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo apt install -y python3-pip
 sudo pip install pandas
 sudo pip install sklearn
 sudo pip install numpy
