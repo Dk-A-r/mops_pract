@@ -13,7 +13,7 @@ df_ts_1 = pd.read_csv('test/1.csv')
 df_ts_2 = pd.read_csv('test/2.csv')
 df_ts = pd.concat([df_ts_1, df_ts_2])
 
-Y_test = df_ts['Высота'].to_numpy().reshape(-1, 1)
+Y_test = df_ts['Height'].to_numpy().reshape(-1, 1)
 X_test = np.concatenate(
     (np.genfromtxt('test/1_std.csv', delimiter=','),
      np.genfromtxt('test/2_std.csv', delimiter=','))
