@@ -13,7 +13,7 @@ df_tr_2 = pd.read_csv('train/2.csv')
 df_tr = pd.concat([df_tr_1, df_tr_2])
 
 
-Y_train = df_tr['Высота'].to_numpy().reshape(-1, 1)
+Y_train = df_tr['Height'].to_numpy().reshape(-1, 1)
 X_train = np.concatenate(
     (np.genfromtxt('train/1_std.csv', delimiter=','),
      np.genfromtxt('train/2_std.csv', delimiter=','))
@@ -21,7 +21,7 @@ X_train = np.concatenate(
 
 model.fit(X_train, Y_train)
 
-#Сохраняем в файл
+#Saving
 pkl_filename = "pickle_model.pkl" 
 with open(pkl_filename, 'wb') as file: 
     pickle.dump(model, file)
