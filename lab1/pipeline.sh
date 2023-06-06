@@ -2,8 +2,8 @@
 
 sudo apt install python3-pip
 pip install pandas
-pip install sklearn
 pip install numpy
+pip install -U scikit-learn
 
 TRIALNAME0=`sudo find / -path \*mops_pract-main/lab1/data_creation.py`
 TRIALNAME1=`sudo find / -path \*mops_pract-main/lab1/data_preprocessing.py`
