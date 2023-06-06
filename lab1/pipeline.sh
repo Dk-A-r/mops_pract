@@ -1,9 +1,9 @@
 #!/bin/bash
 
 sudo apt install python3-pip
-sudo pip install pandas
-sudo pip install sklearn
-sudo pip install numpy
+pip install pandas
+pip install sklearn
+pip install numpy
 
 TRIALNAME0=`sudo find / -path \*mops_pract-main/lab1/data_creation.py`
 TRIALNAME1=`sudo find / -path \*mops_pract-main/lab1/data_preprocessing.py`
