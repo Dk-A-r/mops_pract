@@ -6,8 +6,8 @@ train, test = titanic()
 
 #processing
 #replace text binary data with binary numbers
-train['Sex'] = train['Sex'].apply(lambda x: 0 if 'x == 'male'' else 1)
-test['Sex'] = test['Sex'].apply(lambda x: 0 if 'x == 'male'' else 1)
+train['Sex'] = train['Sex'].apply(lambda x: 0 if x == 'male' else 1)
+test['Sex'] = test['Sex'].apply(lambda x: 0 if x == 'male' else 1)
 #gaps in 'Age' replace with mean value
 train['Age'] = train['Age'].fillna(train.Age.mean())
 test['Age'] = test['Age'].fillna(train.Age.mean())
