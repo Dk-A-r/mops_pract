@@ -1,9 +1,9 @@
-from numpy import genfromtxt
+import numpy
 from sklearn.linear_model import LogisticRegression
 import pickle
 
-X_train = genfromtxt('x_train.csv', delimiter=',')
-y_train = genfromtxt('y_train.csv', delimiter=',')
+X_train = np.loadtxt('x_train.csv', delimiter=',')
+y_train = np.loadtxt('y_train.csv', delimiter=',')
 
 model = LogisticRegression()
 
