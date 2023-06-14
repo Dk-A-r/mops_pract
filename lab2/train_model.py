@@ -7,7 +7,7 @@ y_train = genfromtxt('y_train.csv', delimiter=',')
 
 model = LogisticRegression()
 
-model.fit(x_train, y_train)
+model.fit(X_train, y_train)
 
 #Saving
 pkl_filename = "pickle_model.pkl" 
