@@ -2,7 +2,7 @@ from numpy import genfromtxt
 from sklearn.linear_model import LogisticRegression
 
 X_train = genfromtxt('x_train.csv', delimiter=',')
-y_train = genfromtxt('y_t.csv', delimiter=',')
+y_train = genfromtxt('y_train.csv', delimiter=',')
 
 model = LogisticRegression()
 
