@@ -1,5 +1,6 @@
 from numpy import genfromtxt
 from sklearn.linear_model import LogisticRegression
+import pickle
 
 X_train = genfromtxt('x_train.csv', delimiter=',')
 y_train = genfromtxt('y_train.csv', delimiter=',')
