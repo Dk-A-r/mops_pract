@@ -36,7 +36,11 @@ df = df.reset_index(drop=True)
 
 #Add OHE
 
+transmission = {'Manual': 1, 'Automatic': 0}
+df['Transmission'] = [transmission[item] for item in df['Transmission']]
+
 Y = df['Transmission']
+
 X = df.drop(['Transmission'], axis=1)
 
 num_columns = X.select_dtypes(include=np.number).columns #select only numeric-columns
@@ -59,5 +63,5 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 np.savetxt('x_train.csv', X_train, delimiter=',')
 np.savetxt('x_test.csv', X_test, delimiter=',')
-np.savetxt('y_train.csv', y_train, delimiter=',', fmt='%s')
-np.savetxt('y_test.csv', y_test, delimiter=',', fmt='%s')
+np.savetxt('y_train.csv', y_train, delimiter=',')
+np.savetxt('y_test.csv', y_test, delimiter=',')
