@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+    stages{
+        stage('getData'){
+            steps{
+                git branch: 'main', url: 'https://github.com/Dk-A-r/mops_pract.git'
+                sh 'wget https://raw.githubusercontent.com/dayekb/Study/main/rus/SkillFactory/cars_moldova.csv'
+            }
+        }
+        stage('Prepare'){
+            steps{
+                sh 'ls -ltra'
+                sh 'python3 -m pip install -r ./lab2/requirements.txt'
+                sh 'python3 ./lab2/prep.py'
+            }
+        }
+        stage('Train'){
+            steps{
+                sh 'python3 ./lab2/train_model.py'
+            }
+        }
+        stage('Test'){
+            steps{
+                sh 'python3 ./lab2/test_model.py'
+            }
+        }
+    }
+}
